@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinicmanagement.controller.ClinicController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Clinic Patient Management" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Age:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtAge" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label text="Diagnosis:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtDiagnosis" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Contact:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtContact" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add Patient" onAction="#handleAdd"/>
+        <Button text="Update Selected" onAction="#handleUpdate"/>
+        <Button text="Delete Selected" onAction="#handleDelete"/>
+    </HBox>
+
+    <TableView fx:id="tablePatients" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="colAge" text="Age" prefWidth="50"/>
+            <TableColumn fx:id="colDiagnosis" text="Diagnosis" prefWidth="200"/>
+            <TableColumn fx:id="colContact" text="Contact" prefWidth="100"/>
+        </columns>
+    </TableView>
+</VBox>
