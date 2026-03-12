@@ -283,14 +283,3 @@ The application follows the **MVC (Model-View-Controller)** design pattern:
 - 💾 Database backup and export functionality
 
 ---
-
-## License
-
-This project is open-source and available for educational and personal use.
-
----
-
-## Author
-
-**Created:** January 2026  
-**Project:** Clinic Management System (JavaFX + SQLite)
